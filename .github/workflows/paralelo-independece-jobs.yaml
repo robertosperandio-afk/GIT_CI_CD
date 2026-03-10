@@ -1,0 +1,33 @@
+name: paralelo-independece-jobs
+run-name: Jobs Paralelos e Independentes
+
+on:
+  - push
+
+jobs:
+  test-application:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run lint
+        run: echo "Run Linter" 
+      
+      - name: run testes
+        run: echo "Run teste"
+  build-for-linux:
+    runs-on: ubuntu-latest
+    needs: test-application
+    steps:
+      - name: Build for Linux
+        run: echo "Build for Linux"
+  build-for-windows:
+    runs-on: windows-latest
+    needs: test-application
+    steps:
+      - name: Build for windows
+        run: Write-Output "Build Windows"
+  build-for-macos:
+    runs-on: macos-latest
+    needs: test-application
+    steps:
+      - name: Build for McOs
+        run: echo "Build MCOS"
