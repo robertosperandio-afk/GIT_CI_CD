@@ -1,0 +1,98 @@
+--cria a branch main
+git branch -M main
+
+--atualiza a branch atual
+git push origin main
+
+--criar nova informação commit
+git commit -m "meu primeiro commit power shell"
+
+--criar nova branch 
+git checkout -b "nova branch"
+
+--ir para outra branch
+git checkout minha-branch
+
+
+--excluir branch
+git branch -d "nome-da-branch"
+
+--renomear branch atual
+git branch -m novo-nome-da-branch
+
+--renomear branch atual
+git branch -m nome-atual novo-nome
+
+
+--visualizar o histórico de commit 
+git log
+
+--desvincular repositórios vinculados pelo git init
+rm -rf .git
+
+
+--adicionar novos arquivos ou modificados a branch atual (local)
+git add .
+
+--atualizar branch local
+git commit -m "my first Workflow"
+
+--publicar branch no repositor GitHub web
+git pust origin main (nome da branch)
+
+
+--Clonando Endereço
+git clone https://meu-endereco.com/meu-projeto.git minha-pasta
+
+--Adicionar Repositórios Remotos 
+git remote add origin https://meu-endereco.com/meu-projeto.git
+
+--Visualizar Repositórios Remotos
+git remote -v
+
+--Remover Repositórios Remotos
+git remote rm origin
+
+-- Renomear Repositórios Remotos
+git remote rename nome-atual novo-nome
+
+--Alterar Endereço de Repositórios Remotos
+git remote set-url origin http://meu-novo-endereco/meu-projeto.git
+
+--Listando Branches
+ git branch -a
+
+-- Criando Branches Remotas
+git push -u origin minha-branch
+
+-- Apagando Branches Remotas
+git push origin -d minha-branch
+
+--Renomeando Branches Remotas
+git branch -m nome-atual novo-nome
+
+
+---Após renomear a sua branch local, basta apagar a branch remota com o nome antigo 
+
+
+
+--e fazer um push com a branch com o novo nome:
+
+git push origin :nome-atual novo-nome
+
+
+--Para terminar de ligar a branch local com a remota, entre na branch com o novo nome e execute:
+git push origin -u novo-nome
+
+
+--Deu problema e estão dizendo que foi você? Não mais! Com o comando blame você pode ver quem alterou cada linha de um ---arquivo. (a menos que realmente tenha sido você
+git blame nome-do-arquivo
+
+
+--Para não ficar muito grande, podemos usar -w para ignorar espaços em branco e usar -L para indicar um intervalo de linhas a serem exibidas.
+git blame -w -L 1,12 nome-do-arquivo
+
+
+
+git checkout master # indo para o branch do master
+git merge feature    # fazendo o merge entre o master e o feature

@@ -1,0 +1,12 @@
+name: myfist-CICD-github
+run-name: Meu Primeiro Workflow GItHub
+
+on:
+  - push
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World" 
