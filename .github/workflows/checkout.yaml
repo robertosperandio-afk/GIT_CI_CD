@@ -9,6 +9,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: List and files before
+      run: ls -a  
+
+    - name: Checkout
       run:  |
         ls -a
         git init
@@ -16,5 +19,6 @@ jobs:
         @github.com/$GITHUB_REPOSITORY.git"
         git fecth origin
         git checkout main
+        
     - name: List files after
       run: ls -a
