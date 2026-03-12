@@ -1,0 +1,20 @@
+name: shell-and-workdis
+run-name: shell's e diretórios de trabalho
+on:
+  - push
+
+jobs:
+  display-wordis-info:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Display and Workdis and list Files
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+
+
+
+    
