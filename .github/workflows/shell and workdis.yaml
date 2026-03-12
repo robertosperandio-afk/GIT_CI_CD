@@ -15,6 +15,12 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
 
+      - name: Shell Python
+        shell: python
+        run: |
+         import plataform
+         print(platgorm.processor())
+
 
 
     
