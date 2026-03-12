@@ -4,7 +4,13 @@ run-name: Events
 on:
 #    - push
 #    - pull_request
-- issues
+#- issues
+  pull_request: 
+    branches:
+      - "feature/**"
+    paths:
+      - ".js"
+    
 
 jobs:
     show-ref-and-sha:
