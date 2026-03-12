@@ -1,0 +1,19 @@
+name: Checkout
+run-name: Checkout Name Files
+
+on:
+  - push
+
+jobs:
+  checkout-and-list-files:
+   runs-on: ubuntu-latest
+   steps:
+    - name: List and files before
+      run:  |
+        ls -a
+        git init
+        git remote add origin "http://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+        git fecth origin
+        git checkout main
+    - name: List files after
+      run: ls -a
