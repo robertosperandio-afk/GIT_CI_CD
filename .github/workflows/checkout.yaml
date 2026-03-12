@@ -11,15 +11,17 @@ jobs:
     - name: List and files before
       run: ls -a  
 
+    # - name: Checkout
+    #   run:  |
+    #     ls -a
+    #     git init
+    #     git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}
+    #     @github.com/$GITHUB_REPOSITORY.git"
+    #     git fecth origin
+    #     git checkout main
+
     - name: Checkout
-      run:  |
-        ls -a
-        git init
-        git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}
-        @github.com/$GITHUB_REPOSITORY.git"
-        git fecth origin
-        git checkout main
-        git merge origin/main
+      uses: actions/checkout@v4
 
     - name: List files after
       run: ls -a
