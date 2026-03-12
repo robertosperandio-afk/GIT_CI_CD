@@ -18,8 +18,8 @@ jobs:
       - name: Shell Python
         shell: python
         run: |
-         import plataform
-         print(platgorm.processor())
+         import platform
+         print(platform.processor())
 
 
 
