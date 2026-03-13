@@ -9,12 +9,12 @@ jobs:
   if-expression:
     runs-on: ubuntu-latest
     steps:
-    - name: only on push
-      if: github.event_name == 'push'
-      run: echo "Foi Realizado Um Push"
+      - name: only on push
+        if: github.event_name == 'push'
+        run: echo 'Foi Realizado Um Push'
 
-    - name: only on pull_request
-      if: github.event_name == 'pull_request'
-      run: echo "Foi realizado um pull request"
+      - name: only on pull_request
+        if: github.event_name == 'pull_request'
+        run: echo 'Foi realizado um pull request'
 
   
