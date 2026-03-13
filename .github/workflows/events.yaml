@@ -14,10 +14,10 @@ on:
     
 
 jobs:
-    show-ref-and-sha:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Eho guithub_SHA and guithub_ref
-              run: |
-                echo $GITHUB_SHA
-                echo $GITHUB_REF
+  show-ref-and-sha:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Eho guithub_SHA and guithub_ref
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REF
