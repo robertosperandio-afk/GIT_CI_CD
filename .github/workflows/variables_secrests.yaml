@@ -1,0 +1,13 @@
+name: secrets_variables
+run-name: Variaveis e Segredos
+
+on:
+    - push
+
+jobs:
+    secrets_variables:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo '${{vars.MY_FIRSTVARIABLE}}'
+                echo '${{secrets.MY_FIRSTSECRETS}}'
